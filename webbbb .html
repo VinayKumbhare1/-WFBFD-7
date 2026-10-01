@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aditi Selukar - CM25064 | College Help Portal</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f5f9;
+        }
+
+        .header {
+            background-color: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .header p {
+            margin-top: 8px;
+            font-size: 16px;
+        }
+
+        .student-info {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .faq-container {
+            width: 80%;
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-container h2 {
+            text-align: center;
+            color: #1e3a8a;
+            margin-bottom: 25px;
+        }
+
+        .faq {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .question {
+            background-color: #2563eb;
+            color: white;
+            padding: 16px;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: bold;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .question:hover {
+            background-color: #1d4ed8;
+        }
+
+        .icon {
+            font-size: 20px;
+        }
+
+        .answer {
+            display: none;
+            padding: 16px;
+            background-color: #f8fafc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .answer.show {
+            display: block;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+
+        <!-- Student Name and USN -->
+        <div class="student-info">
+            Aditi Selukar | CM25064
+        </div>
+
+        <h1>College Help Portal</h1>
+
+        <p>Find answers to frequently asked questions</p>
+
+    </div>
+
+
+    <!-- FAQ Section -->
+    <div class="faq-container">
+
+        <h2>Frequently Asked Questions</h2>
+
+
+        <!-- FAQ 1 -->
+        <div class="faq">
+
+            <div class="question">
+                <span>What are the college admission requirements?</span>
+                <span class="icon">+</span>
+            </div>
+
+            <div class="answer">
+                Students must submit their academic documents, identity proof,
+                photographs, and completed admission form during the admission process.
+            </div>
+
+        </div>
+
+
+        <!-- FAQ 2 -->
+        <div class="faq">
+
+            <div class="question">
+                <span>How can I check my examination timetable?</span>
+                <span class="icon">+</span>
+            </div>
+
+            <div class="answer">
+                Students can check the examination timetable on the official
+                college website or through the student portal.
+            </div>
+
+        </div>
+
+
+        <!-- FAQ 3 -->
+        <div class="faq">
+
+            <div class="question">
+                <span>How can I apply for leave?</span>
+                <span class="icon">+</span>
+            </div>
+
+            <div class="answer">
+                Students can apply for leave through the student portal or
+                submit a leave application to their department.
+            </div>
+
+        </div>
+
+
+        <!-- FAQ 4 -->
+        <div class="faq">
+
+            <div class="question">
+                <span>Where can I find study materials?</span>
+                <span class="icon">+</span>
+            </div>
+
+            <div class="answer">
+                Study materials can be accessed through the student portal,
+                department website, or obtained from the respective faculty members.
+            </div>
+
+        </div>
+
+
+        <!-- FAQ 5 -->
+        <div class="faq">
+
+            <div class="question">
+                <span>How can I contact my department?</span>
+                <span class="icon">+</span>
+            </div>
+
+            <div class="answer">
+                You can contact your department office during working hours
+                or send an email to the official department email address.
+            </div>
+
+        </div>
+
+
+        <!-- FAQ 6 -->
+        <div class="faq">
+
+            <div class="question">
+                <span>How can I access the college library?</span>
+                <span class="icon">+</span>
+            </div>
+
+            <div class="answer">
+                Students can access the college library using their valid
+                student ID card during the library's working hours.
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer">
+        Aditi Selukar | CM25064 | College Help Portal
+    </div>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        // Select all FAQ questions
+        const questions = document.querySelectorAll(".question");
+
+
+        // Add click event listener to every question
+        questions.forEach(function(question) {
+
+            question.addEventListener("click", function() {
+
+                // Find the answer associated with the clicked question
+                const answer = question.nextElementSibling;
+
+                // Find the + / - icon
+                const icon = question.querySelector(".icon");
+
+
+                // Show or hide the answer
+                answer.classList.toggle("show");
+
+
+                // Change icon according to answer visibility
+                if (answer.classList.contains("show")) {
+                    icon.textContent = "-";
+                } else {
+                    icon.textContent = "+";
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
